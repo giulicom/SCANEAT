@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:elevation="0dp"
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:background="@color/primary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ActionBarPopupThemeOverlay"/>
+
+    <TextView
+        android:id="@+id/no_favourites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_favourites"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+    <ListView
+        android:id="@+id/myFavouritesLv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"></ListView>
+
+</RelativeLayout>

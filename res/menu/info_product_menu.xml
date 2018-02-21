@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item
+        android:id="@+id/add_item_to_a_list"
+        android:title="@string/add_to_list"
+        app:showAsAction="never"/>-->
+    <item
+        android:id="@+id/add_item_to_favorite"
+        android:title="@string/add_to_favorite"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/modify_item"
+        android:title="@string/modify_item"
+        app:showAsAction="never"/>
+</menu>

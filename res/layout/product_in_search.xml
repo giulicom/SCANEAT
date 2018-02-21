@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <RelativeLayout
+        android:layout_weight="100"
+        android:layout_width="0dp"
+        android:id="@+id/name_brand_icons_search"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/favourite">
+        <TextView
+            android:id="@+id/product_name_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dip"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            android:ellipsize="marquee"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/product_brand_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_name_search"
+            android:textColor="@color/primary_text"
+            android:textStyle="italic"
+            android:ellipsize="marquee"
+            android:singleLine="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_brand_search">
+            <ImageView
+                android:src="@drawable/nogluten_24"
+                android:id="@+id/nogluten_icon_search"
+                android:backgroundTint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <ImageView
+                android:src="@drawable/nomilk_24"
+                android:id="@+id/nomilk_icon_search"
+                android:backgroundTint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/nogluten_icon_search"
+                />
+            <ImageView
+                android:src="@drawable/naturalfood_24"
+                android:id="@+id/vegan_icon_search"
+                android:backgroundTint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/nomilk_icon_search"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
+

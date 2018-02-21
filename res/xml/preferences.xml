@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+       <PreferenceCategory
+        android:title="Impostazioni Account"
+        android:enabled="true"
+
+        >
+
+        <Preference
+            android:dialogIcon="@drawable/ic_face_black_24dp"
+            android:title="Nome"
+            android:key="username"
+            android:summary="Modifica il tuo nome"
+            android:defaultValue="Nome"
+            />
+
+        <Preference
+            android:title="Password"
+            android:summary="Modifica password"
+            android:key="prefUserPassword"
+            android:password="true"
+            android:id="@+id/prefUserPassword"
+
+            android:inputType="textPassword"
+            android:hint="Password"/>
+
+
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Sincronizzazione database prodotti" >
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="DBSync"
+            android:id="@+id/DBSync"
+
+            android:title="Aggiornamento automatico"
+            android:textOff="off"
+            android:textOn="on"
+            android:summaryOn="Attivato"
+            android:summaryOff="Disattivato"
+
+            />
+
+<!--
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prefLockScreen"
+            android:summary="Lock The Screen With Password"
+            android:title="Screen Lock" >
+        </CheckBoxPreference>
+
+        <ListPreference
+            android:key="prefUpdateFrequency"
+            android:title="Reminder for Updation"
+            android:summary="Set Update Reminder Frequency"
+            android:entries="@array/updateFrequency"
+            android:entryValues="@array/updateFrequencyValues"
+            />
+        <CheckBoxPreference android:title="Application Updates"
+            android:defaultValue="false"
+            android:summary="This option if selected will allow the application to check for latest versions."
+            android:key="applicationUpdates" />
+        <ListPreference     android:title="Download Details"
+            android:summary="Select the kind of data that you would like to download"
+            android:key="downloadType"
+            android:defaultValue="1"
+            android:entries="@array/listArray"
+            android:entryValues="@array/listValues" />
+
+-->
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Impostazioni notifiche" >
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="NotifySync"
+            android:id="@+id/NotifySync"
+
+            android:title="Notifiche"
+            android:textOff="off"
+            android:textOn="on"
+            android:summaryOn="On"
+            android:summaryOff="Off"
+
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>

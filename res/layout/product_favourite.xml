@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:weightSum="100"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/contextual_selected"
+    >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:gravity="center">
+        <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/favourite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:buttonTint="@color/accent"
+            android:src="@drawable/ic_star_outline_24dp"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_weight="80"
+        android:layout_width="0dp"
+        android:paddingLeft="12dp"
+        android:id="@+id/name_brand_icons"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/favourite">
+        <TextView
+            android:id="@+id/product_name1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dip"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            android:ellipsize="marquee"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/product_brand1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_name1"
+            android:textColor="@color/primary_text"
+            android:textStyle="italic"
+            android:ellipsize="marquee"
+            android:singleLine="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_brand1">
+            <ImageView
+                android:src="@drawable/nogluten_24"
+                android:id="@+id/nogluten_icon"
+                android:backgroundTint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <ImageView
+                android:src="@drawable/nomilk_24"
+                android:id="@+id/nomilk_icon"
+                android:backgroundTint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/nogluten_icon"
+                />
+            <ImageView
+                android:src="@drawable/naturalfood_24"
+                android:id="@+id/vegan_icon"
+                android:backgroundTint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/nomilk_icon"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_toRightOf="@id/name_brand_icons">
+
+    </RelativeLayout>
+</LinearLayout>
+

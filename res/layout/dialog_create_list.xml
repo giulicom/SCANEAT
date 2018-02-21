@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+<ImageView
+    android:src="@drawable/logo"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:scaleType="center"
+    android:background="#FFFFBB33"
+    android:contentDescription="@string/app_name" />
+<TextView
+    android:id="@+id/new_list"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:text="@string/new_list"
+    android:textSize="@dimen/dialog_title"
+    android:textStyle="bold"
+    android:visibility="gone"/>
+    <TextView
+        android:id="@+id/modify_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="left"
+        android:text="@string/modify_list"
+        android:textSize="@dimen/dialog_title"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+<EditText
+    android:id="@+id/list_name"
+    android:inputType="text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/dialog_item"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginBottom="4dp"
+    android:hint="@string/list_name" />
+
+</LinearLayout>

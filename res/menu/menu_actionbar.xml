@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+    android:id="@+id/sync_menu"
+    android:icon="@drawable/ic_cached_black_24dp"
+    android:title="Sync"
+    app:showAsAction="always"/>
+    <item
+        android:id="@+id/login_menu"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="@string/login"
+        app:showAsAction="always"
+        android:visible="false"/>
+    <item
+        android:id="@+id/logout_menu"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        android:title="@string/logout"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+</menu>

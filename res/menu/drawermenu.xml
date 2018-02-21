@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerMenu">
+
+
+
+    <item android:title="Liste"
+        android:id="@+id/nav_item_lists"
+        android:icon="@drawable/ic_storage_black_24dp"/>
+
+    <item android:title="Cerca"
+        android:id="@+id/nav_item_search"
+        android:icon="@drawable/ic_search_black_24dp"/>
+
+    <!--<item android:title="Drafts"
+        android:id="@+id/nav_item_draft"
+        android:icon="@drawable/draft"/>-->
+
+
+
+    <group android:id="@+id/account">
+        <item android:id="@+id/logged_in"
+            android:icon="@drawable/ic_face_black_24dp"
+            android:visible="false"/>
+        <item android:id="@+id/unlogged"
+            android:title="Log in"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:visible="false"/>
+        <item android:id="@+id/signup_nav_bar"
+            android:title="Registrati"
+            android:icon="@drawable/add_user_male_24"
+            android:visible="false"/>
+        <item android:id="@+id/personal_area"
+            android:title="Area personale"
+            android:icon="@drawable/ic_face_black_24dp"
+            android:visible="false"/>
+        <item android:id="@+id/logout"
+            android:title="Log Out"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:visible="false"/>
+    </group>
+
+    <group android:id="@+id/group_settings_id">
+        <item
+            android:id="@+id/setting_nav_drw"
+            android:title="Impostazioni"
+            android:icon="@drawable/ic_settings_black_24dp"/>
+        <item
+            android:id="@+id/credits_nav_drw"
+            android:title="Informazioni"
+            android:icon="@drawable/ic_info_black_24dp"/>
+    </group>
+
+</menu>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars = "vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    >
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:elevation="0dp"
+        app:title="@string/personal_area_title"
+        android:layout_width="match_parent"
+        android:id="@+id/personal_area_toolbar"
+        android:background="@color/primary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:focusableInTouchMode="true"
+        app:popupTheme="@style/ActionBarPopupThemeOverlay"/>
+
+
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/abc_action_bar_default_height_material"
+            android:id="@+id/personal_area_content_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/personal_area_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dialog_item"
+                android:text="username"
+                android:padding="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp">
+            </TextView>
+
+            <TextView
+                android:layout_below="@+id/personal_area_username"
+                android:id="@+id/personal_area_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dialog_item"
+                android:text="mail"
+                android:padding="12dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="16dp">
+            </TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@+id/personal_area_proposals"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_below="@+id/personal_area_mail"
+                android:id="@+id/personal_area_proposals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dialog_item"
+                android:text="proposte"
+                android:padding="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp">
+            </TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/personal_area_proposals"
+                android:id="@+id/personal_area_divider"
+                android:background="@android:color/darker_gray"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/personal_area_divider"
+            >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/personal_area_recycler_surrounder">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/personal_area_products"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:paddingBottom="8dp"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.project.scaneatapp.CreditsActivity">
+
+
+    <!-- Toolbar   -->
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:elevation="0dp"
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:background="@color/primary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ActionBarPopupThemeOverlay"/>
+
+    <!-- Logo -->
+    <ImageView android:src="@drawable/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/imageView" />
+
+
+    <!-- Title   -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dialog_title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ScanEat"
+        android:id="@+id/titleCredits"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/primary_text"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Text  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/credits"
+        android:id="@+id/textView"
+        android:layout_below="@+id/titleCredits"
+        android:textColor="@color/secondary_text"
+        android:paddingTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+         />
+
+
+
+    <!-- Copyright   -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Copyright \u00A9 2016 - Tutti i diritti riservati"
+        android:id="@+id/copyRight"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"
+        android:textColor="@color/secondary_text"/>
+
+
+</RelativeLayout>

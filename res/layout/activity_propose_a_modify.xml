@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars = "vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        >
+
+        <android.support.v7.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_height="@dimen/abc_action_bar_default_height_material"
+            android:elevation="0dp"
+            app:title="@string/modify_product_title"
+            android:layout_width="match_parent"
+            android:id="@+id/modify_product_toolbar"
+            android:background="@color/primary"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ActionBarPopupThemeOverlay"/>
+
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_below="@+id/modify_product_toolbar"
+            android:id="@+id/textInputlayout_modify_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp">
+            <EditText android:id="@+id/modify_product_name"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/product_name"
+                android:textSize="@dimen/dialog_item"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_below="@+id/textInputlayout_modify_name"
+            android:id="@+id/textInputLayout_modify_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp">
+            <EditText android:id="@+id/modify_product_brand"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/product_brand"
+                android:textSize="@dimen/dialog_item"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <TextView
+            android:id="@+id/modify_product_barcode"
+            android:layout_below="@+id/textInputLayout_modify_brand"
+            android:textSize="@dimen/dialog_item"
+            android:inputType="text"
+            android:scaleType="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            android:hint="@string/barcode"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_below="@+id/modify_product_barcode"
+            android:id="@+id/textInputLayout_modify_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp">
+            <EditText android:id="@+id/modify_product_ingredients"
+                android:padding="16dp"
+                android:gravity="top"
+                android:lines="8"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:inputType="textMultiLine"
+                android:hint="@string/ingredients"
+                android:textSize="@dimen/dialog_item"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_below="@+id/textInputLayout_modify_ingredients"
+            android:id="@+id/modify_product_checkboxes"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <CheckBox android:id="@+id/modify_product_no_gluten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/nogluten_24"
+                android:backgroundTint="@color/white"
+                android:layout_marginLeft="@dimen/checkbox_icon_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFFBB33"
+                android:contentDescription="@string/app_name" />
+            <CheckBox android:id="@+id/modify_product_no_lactose"
+                android:layout_marginLeft="@dimen/icon_checkbox_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/nomilk_24"
+                android:layout_marginLeft="@dimen/checkbox_icon_margin"
+                android:backgroundTint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFFBB33"
+                android:contentDescription="@string/app_name" />
+            <CheckBox android:id="@+id/modify_product_vegan"
+                android:layout_marginLeft="@dimen/icon_checkbox_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/naturalfood_24"
+                android:layout_marginLeft="@dimen/checkbox_icon_margin"
+                android:backgroundTint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFFBB33"
+                android:contentDescription="@string/app_name" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/modify_product_send_button"
+            android:layout_below="@+id/modify_product_checkboxes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/submit_proposal"/>
+
+
+    </RelativeLayout>
+</ScrollView>
