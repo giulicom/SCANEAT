@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="tab_max_width">264dp</dimen>
+    <dimen name="tab_padding_bottom">16dp</dimen>
+    <dimen name="tab_label">14sp</dimen>
+    <dimen name="dialog_title">24sp</dimen>
+    <dimen name="dialog_item">18sp</dimen>
+    <dimen name="custom_tab_layout_height">72dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="checkbox_icon_margin">6dp</dimen>
+    <dimen name="icon_checkbox_margin">36dp</dimen>
+    <dimen name="search_text_size">20sp</dimen>
+    <dimen name="recycler_divider">1dp</dimen>
+    <dimen name="search_text_margin">12dp</dimen>
+</resources>
